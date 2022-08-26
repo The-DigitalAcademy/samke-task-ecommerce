@@ -66,9 +66,14 @@ var productsState = [
     },
   ]
   
-  
+  var cartnumber = 0;
+
   // LINK JS TO HTML ELEMENT
-  const products = document.getElementById('products')
+
+  
+  function cart() {
+    samkelisiwe = document.getElementById('samkelisiwe').innerHTML = ++ cartnumber;
+  }
   
   
   // DISPLAY PRODUCTS IN HOME PAGE
@@ -90,15 +95,13 @@ var productsState = [
                   ${'<span>*</span>'.repeat(productsState[i].rates)}
                 </div>
                 <div class="product__price">R <span>${productsState[i].price}</span></div> 
-                  <button>+ ADD TO CART</button> 
+                  <button onclick="cart()">+ ADD TO CART</button> 
             </div>
       
       `
       
     }
   }
-
-  
   
   
   // CALL THE DISPLAY FUNCTION
